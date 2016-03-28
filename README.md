@@ -8,4 +8,4 @@
 
 ###開発環境とか
 Eclipse Java Mars.2上で開発.
-fx向けにはe(fx)clipseを導入した.
+fx向けにe(fx)clipseを導入しています.
