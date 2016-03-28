@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+
+
+<GridPane xmlns:fx="http://javafx.com/fxml/1"
+			fx:controller="Gui.MainSceneController"
+			hgap="10"
+			vgap="10"
+			alignment="center">
+	<!-- TODO Add Nodes -->
+	<padding>
+         <Insets bottom="10.0" left="10.0" right ="10.0" top="10.0" />
+    </padding>
+	
+		<TextArea fx:id="encoded" promptText="EncodedText" wrapText="true"
+				GridPane.columnIndex="0" GridPane.rowIndex="0" />
+		<Button text="Decode" onAction="#decode"
+				GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+		<TextArea fx:id="decoded" promptText="DecodedText" wrapText="true"
+				GridPane.columnIndex="0" GridPane.rowIndex="1" />
+		<Button text="Encode" onAction="#encode"
+				GridPane.columnIndex="1" GridPane.rowIndex="1" />
+				
+		<HBox GridPane.columnIndex="0" GridPane.rowIndex="2">
+			<fx:define>
+                <ToggleGroup fx:id="group" />
+            </fx:define>
+            <RadioButton text="UTF-8" toggleGroup="$group" selected="true" userData="utf-8" />
+            <RadioButton text="SHIFT-JIS" toggleGroup="$group" userData="shift-jis" />
+            <RadioButton text="EUC_JP" toggleGroup="$group" userData="euc-jp" />
+		</HBox>
+</GridPane>
